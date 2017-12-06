@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+
+var url = 'https://api.coindesk.com/v1/bpi/currentprice.json';
+var https = require('https');
+
+https.get(url, function(res) {
+    var body = '';
+
+    res.on('data', function(chunk){
+        body += chunk;
+    });
+
+    res.on('end', function(){
+        var response= JSON.parse(body);
+        console.log("Current Bitcoin price: \nUSD: %s \nGBP: %s \nEUR: %s", response.bpi.USD.rate_float, response.bpi.GBP.rate_float, response.bpi.EUR.rate_float);
+    });
+
+}).on('error', function(e){
+      console.log("Got an error: ", e);
+    });
