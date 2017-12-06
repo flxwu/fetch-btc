@@ -7,7 +7,7 @@ USD, GBP and EUR value from [Coindesk Api v1](https://api.coindesk.com/v1/) and 
 `snap install fetch-btc`
 
 ### Usage
-Execute `fetch-btc` in command line.
+Execute `snap run fetch-btc` in command line.
 
 
 _Written in Node.JS_
