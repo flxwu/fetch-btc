@@ -10,7 +10,7 @@ Thank you [@Ubuntu](https://www.ubuntu.com) for inspiring me!
 `snap install fetch-btc`
 
 ### Usage
-Execute `fetch-btc` in command line.
+Execute `snap run fetch-btc` in command line.
 
 
 _Written in Node.JS_
